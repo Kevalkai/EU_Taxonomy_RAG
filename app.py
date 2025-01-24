@@ -10,6 +10,8 @@ from utils.metrics import evaluate_pipeline_with_custom_prompt, update_progress,
 from sentence_transformers import SentenceTransformer
 import subprocess
 
+import shutil
+
 
 
 def is_installed(command):
@@ -21,20 +23,26 @@ def is_installed(command):
         return False
 
 def install_ollama():
-    """Install Ollama if not already installed."""
-    if not is_installed("ollama"):
+    """Install Ollama if not already installed and print the installation path."""
+    if not shutil.which("ollama"):
         print("Ollama is not installed. Installing now...")
         try:
             subprocess.run(
-                ["curl", "-fsSL", "https://ollama.com/install.sh | sh"],
+                ["curl", "-fsSL", "https://ollama.com/install.sh", "|", "bash"],
                 check=True,
                 shell=True
             )
-            print("Ollama installation script executed successfully.")
+            # Verify installation path
+            ollama_path = shutil.which("ollama")
+            if ollama_path:
+                print(f"Ollama installed successfully at: {ollama_path}")
+            else:
+                print("Ollama installation completed, but the binary is not in the PATH.")
         except subprocess.CalledProcessError as e:
             print(f"Error occurred during installation: {e.stderr}")
     else:
-        print("Ollama is already installed.")
+        ollama_path = shutil.which("ollama")
+        print(f"Ollama is already installed at: {ollama_path}")
 
 def pull_llama(version):
     """Pull the specified version of Llama using the full path to Ollama."""
