@@ -37,17 +37,22 @@ def install_ollama():
         print("Ollama is already installed.")
 
 def pull_llama(version):
-    """Pull the specified version of Llama using Ollama."""
+    """Pull the specified version of Llama using the full path to Ollama."""
+    ollama_path = "/usr/local/bin/ollama"  # Update this path based on your system
     try:
         print(f"Pulling Llama version {version}...")
-        subprocess.run(
-            ["ollama", "pull", f"llama{version}"],
+        result = subprocess.run(
+            [ollama_path, "pull", f"llama{version}"],
             check=True,
-            text=True
+            text=True,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE
         )
-        print(f"Llama version {version} pulled successfully.")
+        print(f"Llama version {version} pulled successfully:\n{result.stdout}")
+    except FileNotFoundError:
+        print(f"Error: The command '{ollama_path}' was not found.")
     except subprocess.CalledProcessError as e:
-        print(f"Error pulling Llama version {version}: {e.stderr}")
+        print(f"Error pulling Llama version {version}:\n{e.stderr}")
 
 def serve_ollama():
     """Start the Ollama server."""
