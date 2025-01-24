@@ -42,7 +42,7 @@ def pull_llama(version):
     try:
         print(f"Pulling Llama version {version}...")
         result = subprocess.run(
-            [ollama_path, "pull", f"llama{version}"],
+            [ollama_path, "pull", f"ollama{version}"],
             check=True,
             text=True,
             stdout=subprocess.PIPE,
@@ -211,7 +211,7 @@ def main():
 
 if __name__ == "__main__":
     install_ollama()
-
-    serve_ollama()
     pull_llama("3.2")
+    serve_ollama()
+
     main()
