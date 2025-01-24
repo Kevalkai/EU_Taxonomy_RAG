@@ -95,14 +95,14 @@ EU_Taxonomy_RAG/
 ├── app.py                      # Main Streamlit application
 ├── requirements.txt            # Python dependencies
 ├── README.md                   # Project documentation
-├── data/
-│   └── faq_data.json           # Sample FAQ data for testing
+└── faq_data.json               # Sample FAQ data for testing
 ├── utils/
 │   ├── corpus_loader.py        # Functions to load and process the JSON corpus
 │   ├── faiss_manager.py        # Functions to build, query, and manage the FAISS index
 │   ├── ollama_interface.py     # Functions to interact with the Ollama API
 │   ├── metrics.py              # Evaluation metrics (BLEU, ROUGE, Exact Match)
 ├── batch_evaluation_results.json  # Saved results of batch evaluations
+├── Data Scrapping              # Used Scripped to scrap and save(faq_data.json) EU Taxonomy FAQ 
 └── .gitignore                  # Git ignore file
 ```
 
