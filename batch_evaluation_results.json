@@ -1,0 +1,95 @@
+[
+    {
+        "Custom Prompt": "Answer the following question using the provided context:\nContext:\n<retrieved_docs>\nQuestion:\n<query>\nAnswer:",
+        "Top K Retrieved": 1,
+        "Metrics": [
+            {
+                "Question": "Are derivative instruments in scope of Taxonomy-eligibility reporting?",
+                "Generated Answer": "Yes, derivatives are included in the denominator of taxonomy-eligibility reporting but excluded from the numerator. Financial undertakings may also disclose voluntarily, but this should not contradict or misrepresent mandatory information.",
+                "BLEU": 0.0043883403185663175,
+                "ROUGE-1": 0.24752475247524752,
+                "ROUGE-2": 0.17,
+                "ROUGE-L": 0.21782178217821782,
+                "Exact Match": 0
+            }
+        ],
+        "Average Metrics": {
+            "Average BLEU": 0.0043883403185663175,
+            "Average ROUGE-1": 0.24752475247524752,
+            "Average ROUGE-2": 0.17,
+            "Average ROUGE-L": 0.21782178217821782,
+            "Average Exact Match": 0.0
+        }
+    },
+    {
+        "Custom Prompt": "Using the provided context, extract and return only the factual information directly relevant to the question:\nContext:\n<retrieved_docs>\nQuestion:\n<query>\nAnswer:",
+        "Top K Retrieved": 2,
+        "Metrics": [
+            {
+                "Question": "How are the life cycle emissions assessed and calculated for the activity \u201cManufacture of hydrogen\u201d in Section 3.10.? For example, is the manufacture of the equipment taken into account when assessing life cycle emissions?",
+                "Generated Answer": "Here is the factual information directly relevant to the question:\n\nThe life cycle emissions for the activity \"Manufacture of hydrogen\" are assessed using an alternative calculation methodology referred to in Article 28(5) of RED II, which follows ISO standards.",
+                "BLEU": 0.042830717614384714,
+                "ROUGE-1": 0.3195266272189349,
+                "ROUGE-2": 0.17964071856287425,
+                "ROUGE-L": 0.24852071005917162,
+                "Exact Match": 0
+            },
+            {
+                "Question": "How should the Taxonomy-alignment of passenger cars be assessed for cars that are not subject to the EU carbon emission test cycle (WLTP)?",
+                "Generated Answer": "Here is the factual information directly relevant to the question:\n\n* To be classified as Taxonomy-aligned, an economic activity should fulfil the respective TSC for substantial contribution and DNSH.\n* The minimum safeguards must also be complied with.\n\nNo additional information about the assessment of passenger cars not subject to WLTP can be extracted from the provided context.",
+                "BLEU": 2.5526605492941612e-05,
+                "ROUGE-1": 0.12944983818770228,
+                "ROUGE-2": 0.07467532467532466,
+                "ROUGE-L": 0.11326860841423948,
+                "Exact Match": 0
+            }
+        ],
+        "Average Metrics": {
+            "Average BLEU": 0.021428122109938826,
+            "Average ROUGE-1": 0.22448823270331858,
+            "Average ROUGE-2": 0.12715802161909945,
+            "Average ROUGE-L": 0.18089465923670556,
+            "Average Exact Match": 0.0
+        }
+    },
+    {
+        "Custom Prompt": "Summarize the following context and provide a concise answer to the question:\nContext:\n<retrieved_docs>\nQuestion:\n<query>\nAnswer:",
+        "Top K Retrieved": 5,
+        "Metrics": [
+            {
+                "Question": "For the DNSH criterion to circular economy for the activity \u201cConstruction of new buildings\u201d in Section 7.1., is it acceptable that material prepared for energy recovery (incineration) can be counted towards the requirement that 70% of the non-hazardous construction and demolition waste generated on the construction site is prepared for reuse, recycling and other material recovery? Or should incineration/waste be considered outside the 70%?",
+                "Generated Answer": "The answer to the question is no, it is not acceptable to count material prepared for energy recovery (incineration) towards the requirement that 70% of non-hazardous construction and demolition waste generated on the construction site is prepared for reuse, recycling, and other material recovery. According to Article 17(1)(d) of the Taxonomy Regulation, economic activities leading to a significant increase in the generation, incineration, or disposal of waste should be considered to significantly harm the circular economy. Therefore, material prepared for incineration should not be included in the 70% threshold.",
+                "BLEU": 0.3797446764682666,
+                "ROUGE-1": 0.6431718061674009,
+                "ROUGE-2": 0.4977777777777778,
+                "ROUGE-L": 0.5814977973568283,
+                "Exact Match": 0
+            },
+            {
+                "Question": "How should reinsurance undertakings apply the pro-rata approach explained in the response to question 67 to treaty business, given that a portion of the underlying products covered by a treaty may not relate to climate-related perils?",
+                "Generated Answer": "The answer is: Reinsurance undertakings should disclose only those premiums or shares of premiums related to the underwriting of climate-related perils from treaties.",
+                "BLEU": 0.29695486969084056,
+                "ROUGE-1": 0.6551724137931034,
+                "ROUGE-2": 0.5714285714285715,
+                "ROUGE-L": 0.6206896551724139,
+                "Exact Match": 0
+            },
+            {
+                "Question": "How is \u2018substantial\u2019 defined in point 2 of the substantial contribution criteria of the activity \u201cData-driven solutions for GHG emissions reduction\u201d in Section 8.2., which refer to \u2018substantial life-cycle GHG emission savings\u2019? How is \u2018best performing alternative\u2019 defined?",
+                "Generated Answer": "The question is asking how \"substantial\" is defined in point 2 of the substantial contribution criteria for the activity \"Data-driven solutions for GHG emissions reduction\" in Section 8.2., which refer to \"substantial life-cycle GHG emission savings\". \n\nAccording to the provided context, 'substantial' refers to achieving a certain level of life-cycle GHG emission savings compared to the best performing alternative technology/product/solution available on the market. The precise definition leaves some flexibility depending on the specific activity in question and is influenced by credible external sources of information on the potential of the technology to help achieve decarbonisation of the target activity.",
+                "BLEU": 0.0,
+                "ROUGE-1": 0.12598425196850394,
+                "ROUGE-2": 0.047999999999999994,
+                "ROUGE-L": 0.12598425196850394,
+                "Exact Match": 0
+            }
+        ],
+        "Average Metrics": {
+            "Average BLEU": 0.22556651538636907,
+            "Average ROUGE-1": 0.4747761573096694,
+            "Average ROUGE-2": 0.37240211640211646,
+            "Average ROUGE-L": 0.44272390149924873,
+            "Average Exact Match": 0.0
+        }
+    }
+]
