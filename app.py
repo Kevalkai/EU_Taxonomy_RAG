@@ -206,6 +206,7 @@ def main():
 
 if __name__ == "__main__":
     install_ollama()
-    pull_llama("3.2")
+
     serve_ollama()
+    pull_llama("3.2")
     main()
