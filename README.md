@@ -163,5 +163,7 @@ Metrics are saved to `batch_evaluation_results.json`.
    - The Ollama server must use the default port (`11434`) unless the app is modified.
 
 
-THANK YOU
-Kevin Al-KAi
+---
+
+## Thank You
+By Kevin Al-Kai
