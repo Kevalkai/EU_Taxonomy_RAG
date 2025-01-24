@@ -26,7 +26,7 @@ def install_ollama():
         print("Ollama is not installed. Installing now...")
         try:
             subprocess.run(
-                ["curl", "-fsSL", "https://ollama.com/install.sh | bash"],
+                ["curl", "-fsSL", "https://ollama.com/install.sh | sh"],
                 check=True,
                 shell=True
             )
