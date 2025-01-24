@@ -140,6 +140,8 @@ Question:
 Answer:
 ```
 
+Some custom prompts are saved and proposed. We can see their Rouge/Bleu score calculated after batch evaluation.
+
 ### Batch Evaluation
 1. Navigate to the **Batch Evaluation** page.
 2. Enter a custom prompt.
@@ -147,6 +149,8 @@ Answer:
 4. Run the evaluation to compute metrics.
 
 Metrics are saved to `batch_evaluation_results.json`.
+
+In the batch evaluation page for our use case, evaluation is conducted by comparing the model's generated answers to reference answers taken from the FAQ dataset, which serves as the ground truth. For each query, multiple documents are retrieved from the database to provide context, and the model generates an answer based on this retrieved information. The generated answers are then compared to the ground truth answers using metrics like ROUGE or BLEU, which measure lexical overlap. However, since the generated answers are based on multiple retrieved documents and may include valid reformulations or additional context, they often differ from the exact phrasing of the FAQ ground truth. As a result, these metrics are primarily used as a relative comparison tool to evaluate performance across different model configurations, rather than as a definitive measure of correctness.
 
 ---
 
