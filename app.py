@@ -13,11 +13,13 @@ from sentence_transformers import SentenceTransformer
 
 # Main Streamlit Interface
 def main():
-    st.title("Custom Prompt Evaluation")
-    st.markdown("**Evaluate single queries or a custom prompt applied to all queries in the database.**")
+    st.title("RAG approach for the FAQs of the EU Taxonomy Navigator ")
+
 
     # Sidebar for navigation
     page = st.sidebar.selectbox("Choose a page", ["Single Query", "Batch Evaluation"])
+
+
 
     # Load JSON corpus file
     json_path = st.text_input("Enter the path to your JSON corpus file:", "faq_data.json")
@@ -41,9 +43,11 @@ def main():
             st.session_state["index"] = index
             st.session_state["model"] = model
 
+
     # Check if the index is loaded
     if "index" in st.session_state:
         if page == "Single Query":
+            st.markdown("### Single Querie Inference")
             # Single Query Page
             query = st.text_input("Enter your question:")
             top_k = st.slider("Number of documents to retrieve:", 1, 10, 5)
@@ -102,7 +106,7 @@ def main():
 
         elif page == "Batch Evaluation":
             st.markdown("### Batch Evaluation")
-
+            st.markdown("**Evaluate custom prompt applied to a set of queries in the database.**")
             # Input for custom prompt
             custom_prompt = st.text_area(
                 "Enter your custom prompt (use <retrieved_docs> and <query> as placeholders):",
