@@ -8,7 +8,59 @@ from utils.faiss_manager import build_faiss_index, load_faiss_index, query_faiss
 from utils.ollama_interface import generate_answer_with_ollama
 from utils.metrics import evaluate_pipeline_with_custom_prompt, update_progress, save_metrics_to_file, load_saved_prompts_with_metrics
 from sentence_transformers import SentenceTransformer
+import subprocess
 
+
+
+def is_installed(command):
+    """Check if a command is available on the system."""
+    try:
+        subprocess.run([command], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+        return True
+    except FileNotFoundError:
+        return False
+
+def install_ollama():
+    """Install Ollama if not already installed."""
+    if not is_installed("ollama"):
+        print("Ollama is not installed. Installing now...")
+        try:
+            subprocess.run(
+                ["curl", "-fsSL", "https://ollama.com/install.sh | bash"],
+                check=True,
+                shell=True
+            )
+            print("Ollama installation script executed successfully.")
+        except subprocess.CalledProcessError as e:
+            print(f"Error occurred during installation: {e.stderr}")
+    else:
+        print("Ollama is already installed.")
+
+def pull_llama(version):
+    """Pull the specified version of Llama using Ollama."""
+    try:
+        print(f"Pulling Llama version {version}...")
+        subprocess.run(
+            ["ollama", "pull", f"llama{version}"],
+            check=True,
+            text=True
+        )
+        print(f"Llama version {version} pulled successfully.")
+    except subprocess.CalledProcessError as e:
+        print(f"Error pulling Llama version {version}: {e.stderr}")
+
+def serve_ollama():
+    """Start the Ollama server."""
+    try:
+        print("Starting Ollama server...")
+        subprocess.run(
+            ["ollama", "serve"],
+            check=True,
+            text=True
+        )
+        print("Ollama server is now running.")
+    except subprocess.CalledProcessError as e:
+        print(f"Error starting Ollama server: {e.stderr}")
 
 
 # Main Streamlit Interface
@@ -153,4 +205,7 @@ def main():
                     st.success("Evaluation results and prompt saved to 'batch_evaluation_results.json'")
 
 if __name__ == "__main__":
+    install_ollama()
+    pull_llama("3.2")
+    serve_ollama()
     main()
