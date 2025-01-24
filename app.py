@@ -38,7 +38,7 @@ def install_ollama():
 
 def pull_llama(version):
     """Pull the specified version of Llama using the full path to Ollama."""
-    ollama_path = "/usr/local/bin/ollama"  # Update this path based on your system
+    ollama_path = "./ollama"  # Update this path based on your system
     try:
         print(f"Pulling Llama version {version}...")
         result = subprocess.run(
