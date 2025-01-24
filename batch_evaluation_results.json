@@ -1,8 +1,401 @@
 [
     {
-        "Custom Prompt": "Answer the following question using the provided context:\nContext:\n<retrieved_docs>\nQuestion:\n<query>\nAnswer:"
+        "Custom Prompt": "Answer the following question using the provided context:\nContext:\n<retrieved_docs>\nQuestion:\n<query>\nAnswer:",
+        "Top K Retrieved": 3,
+        "Metrics": [
+            {
+                "Question": "For the activity \u201cSea and coastal freight water transport, vessels for port operations and auxiliary activities\u201d in Section 6.10., does a vessel have to run on zero direct emission fuels or on fuels from renewable sources in order to be Taxonomy-aligned, or is it sufficient that the vessel is certified for fuels from renewable sources such as biofuels?",
+                "Generated Answer": "Based on the provided context, it is not sufficient that the vessel is certified for fuels from renewable sources (such as biofuels). According to Section 6.10. of Annex I, a vessel must meet the substantial contribution criteria, which includes running on zero direct CO2 emission or renewable fuels that comply with specific criteria (e.g., hydrogen and biogas/bioliquids) in order to be Taxonomy-aligned.\n\nWhile being certified for fuels from renewable sources may indicate that the vessel is using environmentally friendly options, it does not guarantee compliance with the zero direct CO2 emission requirement. The attained Energy Efficiency Design Index (EEDI) value must also meet specific requirements, and the vessel's energy conversion system installed on board must be capable of running on these specified fuels.\n\nTherefore, a vessel cannot simply be certified for biofuels or other renewable fuels to be considered Taxonomy-aligned; it must demonstrate compliance with the zero direct CO2 emission criterion by meeting the EEDI requirements and using energy conversion systems that can run on compliant fuels.",
+                "BLEU": 0.14433263665445667,
+                "ROUGE-1": 0.4841628959276018,
+                "ROUGE-2": 0.23636363636363636,
+                "ROUGE-L": 0.25339366515837103,
+                "Exact Match": 0
+            },
+            {
+                "Question": "For the activity \u201cRenovation of existing buildings\u201d in Section 7.2., does the wording \u2018is based on a detailed building survey, an energy audit conducted by an accredited independent expert or any other transparent and proportionate method\u2019 mean that to determine the starting Primary Energy Demand (PED) value in addition to an on-site measurement of the PED, alternative methods are acceptable as long as they are \u2018transparent and proportionate\u2019? Would it be acceptable to determine (e.g. by using property characteristics and year of construction) upper and lower estimated PED-values for existing energy labels and use the upper PED-values as the starting-PED-value to determine the starting point of a renovation?",
+                "Generated Answer": "Based on the provided context, yes, the wording 'is based on a detailed building survey, an energy audit conducted by an accredited independent expert or any other transparent and proportionate method' does mean that alternative methods are acceptable as long as they are 'transparent and proportionate'.\n\nThe fact that it mentions specific methods (detailed building survey, energy audit) suggests that these are the preferred methods for determining PED values. However, the phrase \"or any other transparent and proportionate method\" implies that other methods can also be used, as long as they meet the criteria of being transparent and proportionate.\n\nDetermining upper and lower estimated PED-values for existing energy labels and using the upper PED-values as the starting-PED-value to determine the starting point of a renovation would be acceptable. This is because these values are likely based on property characteristics and year of construction, which can be considered transparent and proportionate methods.",
+                "BLEU": 0.16182971038813954,
+                "ROUGE-1": 0.3414634146341464,
+                "ROUGE-2": 0.180327868852459,
+                "ROUGE-L": 0.26829268292682923,
+                "Exact Match": 0
+            },
+            {
+                "Question": "How should reporting undertakings disclose turnover from Taxonomy-aligned economic activities whose output is used or consumed internally?",
+                "Generated Answer": "Reporting undertakings should disclose the amounts related to taxonomy-aligned activities pursued for non-financial undertakings' own internal consumption as an element of contextual information, allowing them to explain whether and how the outputs of internal sales or consumption of Taxonomy-aligned economic activities have evolved over the reporting period, alongside the main drivers and elements of change in their turnover KPI.",
+                "BLEU": 0.16673417603499094,
+                "ROUGE-1": 0.5797101449275363,
+                "ROUGE-2": 0.5268292682926828,
+                "ROUGE-L": 0.5410628019323671,
+                "Exact Match": 0
+            },
+            {
+                "Question": "As regards the top 15% criterion concerning substantial contribution to CCM listed in Section 7.7. of Annex I to the Climate Delegated Act, would a conclusion that buildings built after a certain year are in the top 15% constitute an estimate which could only be used for voluntary reporting by credit institutions?",
+                "Generated Answer": "Based on the provided context, a conclusion that buildings built after a certain year are in the top 15% concerning substantial contribution to CCM listed in Section 7.7. of Annex I to the Climate Delegated Act, would indeed constitute an estimate.\n\nThe reason is that there are no specific rules for defining the top 15% or 30% of the building stock beyond referring to the national or regional building stock expressed as operational Primary Energy Demand (PED) and distinguishing between residential and non-residential buildings. According to the Commission Notice on the Climate Delegated Act, in the absence of a relevant EPC, a technical study can be done to estimate the relevant threshold for the top 15% of the national (or regional) building stock.\n\nHowever, the use of the year of construction of a building as a proxy is not allowed, as stated in response to question 151. Therefore, any conclusion about buildings built after a certain year being in the top 15% would be an estimate and could only be used for voluntary reporting by credit institutions.",
+                "BLEU": 0.25098345476090417,
+                "ROUGE-1": 0.5748987854251012,
+                "ROUGE-2": 0.4308943089430894,
+                "ROUGE-L": 0.4210526315789474,
+                "Exact Match": 0
+            },
+            {
+                "Question": "How do the Sections 4.3 (\u201cElectricity generation from wind power\u201d) and 7.6 (\u201cInstallation, maintenance and repair of renewable energy technologies\u201d) interact when it comes to the construction or operation of electricity generation facilities that produce electricity from wind power and the installation, maintenance and repair of wind turbines? Which activities are to be allocated to activity 7.6?",
+                "Generated Answer": "According to Section 4.3, Sections 4.3 covers the construction or operation of electricity generation facilities that produce electricity from wind power in all situations, except when the wind turbines are installed on-site as technical building systems.\n\nOn the other hand, Section 7.6 specifically covers the installation, maintenance and repair of wind turbines and ancillary technical equipment, if installed on-site as technical building systems.\n\nTherefore, activities related to the construction or operation of electricity generation facilities that produce electricity from wind power in situations where the wind turbines are not installed on-site as technical building systems should be allocated to Section 4.3.",
+                "BLEU": 0.4603620888547976,
+                "ROUGE-1": 0.7204301075268816,
+                "ROUGE-2": 0.5652173913043478,
+                "ROUGE-L": 0.5591397849462365,
+                "Exact Match": 0
+            },
+            {
+                "Question": "What are the minimum requirements of the Environmental Impact Assessment to achieve Taxonomy-alignment?",
+                "Generated Answer": "The minimum requirements of the Environmental Impact Assessment (EIA) to achieve Taxonomy-alignment are:\n\n1. An Environmental Impact Assessment or screening has been completed in accordance with Directive 2011/92/EU.\n2. The developer must provide an EIA report, including information as per Art. 5(1) and Annex IV of the Directive.\n\nNote that these requirements do not imply a mandatory EIA for all activities subject to EU law. Instead, they require completion of an Environmental Impact Assessment or screening and implementation of required mitigation measures if applicable.",
+                "BLEU": 0.16573870157723306,
+                "ROUGE-1": 0.3870967741935484,
+                "ROUGE-2": 0.22325581395348837,
+                "ROUGE-L": 0.27649769585253453,
+                "Exact Match": 0
+            },
+            {
+                "Question": "Point (g) in Appendix C seems similar to point (f). Is this meant to\u202fbroaden the scope to other substances not currently under consideration and if so, how should it apply?",
+                "Generated Answer": "The criteria in points (d), (e), and (f) of Appendix C aim to identify substances that meet the criteria set out in Article 57 of REACH but are not yet included on the candidate list for potential inclusion in Annex XIV.\n\nSubstances covered by point (g) can be found in several sources, depending on the particular paragraph of REACH Art. 57 they belong to:\n\n* As regards REACH Art. 57(a-c): one source is the classification and labelling inventory managed by the European Chemicals Agency pursuant to Article 42 of the CLP Regulation.\n* As regards REACH Art. 57(d-f): The hazard categories mentioned in this paragraph are not yet covered by the C&L Inventory, but ECHA manages lists of substances under assessment by its informal ECHA Expert Groups.\n\nTo determine if point (g) is meant to broaden the scope to other substances not currently under consideration, it can be concluded that:\n\n* Point (g) refers to substances that meet the criteria set out in Article 57 of REACH but are not yet included on the candidate list.\n* The specific sources listed for each paragraph of REACH Art. 57 suggest that point (g) is intended to capture a broader range of substances than those already included on the candidate list.\n\nTherefore, it can be inferred that point (g) in Appendix C is indeed meant to broaden the scope to other substances not currently under consideration.",
+                "BLEU": 0.22269849843016032,
+                "ROUGE-1": 0.5637982195845698,
+                "ROUGE-2": 0.4077380952380953,
+                "ROUGE-L": 0.4421364985163205,
+                "Exact Match": 0
+            },
+            {
+                "Question": "How should exposures of financial undertakings to regional governments and to entities controlled by States be treated?",
+                "Generated Answer": "Exposures of financial undertakings to regional governments and to entities controlled by States are not excluded from the calculation of the numerator and denominator of the key performance indicators (KPIs) of financial undertakings. According to Article 7(1) of the Disclosures Delegated Act, only exposures to central governments, central banks, and supranational issuers are excluded. Therefore, financing regional and local public authorities should be included in the numerator of the KPIs of financial undertakings to the extent that the instruments or lending are Taxonomy-aligned, while all instruments or lending where the use of proceeds is known should be included in the denominator of the KPIs of financial undertakings.",
+                "BLEU": 0.33436432127364063,
+                "ROUGE-1": 0.6843853820598006,
+                "ROUGE-2": 0.5752508361204014,
+                "ROUGE-L": 0.5581395348837209,
+                "Exact Match": 0
+            },
+            {
+                "Question": "What are the actual Nearly Zero-Energy Buildings (NZEB) thresholds in each Member State (region)?",
+                "Generated Answer": "The answer is not explicitly provided, as it is mentioned that \"This information can be obtained from national authorities.\" Therefore, the actual NZEB thresholds for each region within the EU would need to be sought directly from the relevant national authorities.",
+                "BLEU": 0.21100729238062318,
+                "ROUGE-1": 0.4578313253012048,
+                "ROUGE-2": 0.22222222222222224,
+                "ROUGE-L": 0.28915662650602414,
+                "Exact Match": 0
+            },
+            {
+                "Question": "Environmental impact assessments (EIAs) are not always required by national law. If the EIA is not required by EU law, is waiving the EIA then harmless for the assessment of Taxonomy-alignment?",
+                "Generated Answer": "Yes, waiving an Environmental Impact Assessment (EIA) when it's not required by EU law is considered harmless for assessing Taxonomy-alignment. The requirement for an EIA is to conduct a screening to determine whether an EIA is necessary, and if the conclusion is that no EIA is needed, then this part of the requirement is met.\n\nThe EU Taxonomy only indicates whether a company has Taxonomy-aligned activities or not, but financial market participants can recognize different degrees of environmental performance through the Corporate Sustainability Reporting Directive. This means that even if an activity doesn't comply with the EU Taxonomy criteria, it may still have a certain level of environmental performance that can be recognized.\n\nIt's also worth noting that the EU Taxonomy does not constitute a mandatory list for investors to invest in, and financial market participants can choose to invest in companies that carry out activities with different degrees of environmental performance.",
+                "BLEU": 0.10364010357575049,
+                "ROUGE-1": 0.4074074074074074,
+                "ROUGE-2": 0.1595744680851064,
+                "ROUGE-L": 0.23280423280423276,
+                "Exact Match": 0
+            },
+            {
+                "Question": "How should exposures to special purpose vehicles (\u2018SPVs\u2019) be treated? Do financial undertakings have to assess specialised lending/project financing for the purpose of Taxonomy-alignment reporting?",
+                "Generated Answer": "Exposures to special purpose vehicles (\u2018SPVs\u2019) should be included in the breakdowns of the numerator of their key performance indicators (KPIs) per type of issuer/counterparty. Financial undertakings should look through their investments and assets to assess those investee undertakings that are the ultimate beneficiaries and their taxonomy-aligned activities.\n\nFor lending and investments where the use of proceeds is unknown, financial undertakings should use the KPIs of the undertaking that is the ultimate beneficiary of the financing that controls a SPV or, where those KPIs are not available, the KPIs of its reporting parent undertaking to assess their exposure to that SPV.\n\nFor financing and investments where the use of proceeds is known, financial undertakings should take into account the Taxonomy-alignment of the economic activities financed through a SPV to assess their exposure to that SPV.\n\nExposures toward SPVs should be excluded from the numerator of the KPIs of financial undertakings in accordance with Article 7(3) of the Disclosures Delegated Act, except for bonds and debt securities exposures referred to in Article 7(4) of that Delegated Act. However, the Taxonomy-alignment of those exposures could be reported on a voluntary basis.\n\nIf an SPV is financing several undertakings, the exposure towards the SPV should be included in the numerator of KPIs of financial undertakings if at least one financed undertaking consolidates the SPV and is subject to Article 19a or 29a of the Accounting Directive.",
+                "BLEU": 0.42840555147049475,
+                "ROUGE-1": 0.7031963470319635,
+                "ROUGE-2": 0.6717557251908397,
+                "ROUGE-L": 0.654490106544901,
+                "Exact Match": 0
+            },
+            {
+                "Question": "How should Taxonomy-alignment be disclosed for mortgage and motor vehicle loans when relevant data is not available?",
+                "Generated Answer": "For mortgage and motor vehicle loans where relevant data is not available, financial undertakings should disclose a 'zero' value in the numerator of the relevant key performance indicator (KPI) without any further assessment. They may also choose to estimate their Taxonomy-alignment and report it voluntarily, separately from their mandatory disclosures, as long as they do not contradict or misrepresent mandatory information under the Disclosures Delegated Act and do not make voluntary reporting more prominent than mandatory disclosures.",
+                "BLEU": 0.03263751160857365,
+                "ROUGE-1": 0.3660477453580902,
+                "ROUGE-2": 0.272,
+                "ROUGE-L": 0.32360742705570295,
+                "Exact Match": 0
+            },
+            {
+                "Question": "How should reporting undertakings allocate the turnover to economic activities which provide multiple services or products to customers?",
+                "Generated Answer": "According to the context provided, a reporting undertaking should allocate its turnover to different economic activities based on the analysis made in the financial statements, following the principles outlined in IFRS 15. Specifically, if goods and services are distinct from an accounting perspective, the turnover should be split into and allocated to the corresponding underlying economic activities.",
+                "BLEU": 0.02674056033922723,
+                "ROUGE-1": 0.3432835820895523,
+                "ROUGE-2": 0.1954887218045113,
+                "ROUGE-L": 0.29850746268656714,
+                "Exact Match": 0
+            },
+            {
+                "Question": "For residential buildings, can compliance with the technical screening criteria of the activity \u201cConstruction of new buildings\u201d in Section 7.1. be demonstrated by using a limited sub-set of apartment units, instead of checking compliance for the whole property? Does this possibility also apply in non-residential buildings?",
+                "Generated Answer": "For residential buildings, compliance with the technical screening criteria of the activity \"Construction of new buildings\" in Section 7.1. can be demonstrated by using a limited sub-set of apartment units if all apartment units are identical and have normally identical EPCs (Energy Performance Certificate). In such cases, a limited sub-set of apartments can be used to demonstrate compliance.\n\nHowever, if there are different types of apartments with different EPCs, all types need to be checked.",
+                "BLEU": 0.10166652624311859,
+                "ROUGE-1": 0.38524590163934425,
+                "ROUGE-2": 0.22314049586776863,
+                "ROUGE-L": 0.2704918032786885,
+                "Exact Match": 0
+            },
+            {
+                "Question": "What is the difference between the technical screening criteria for substantial contribution to climate change adaptation set out in Annex II and the technical screening criteria for DNSH to climate change adaptation set out in Annex I (climate change mitigation)?",
+                "Generated Answer": "The main differences between the technical screening criteria for substantial contribution to climate change adaptation set out in Annex II and the technical screening criteria for DNSH to climate change adaptation set out in Annex I (climate change mitigation) are:\n\n1. Implementation requirement: The substantial contribution criteria for climate change adaptation (included in Annex II to the Climate Delegated Act) require the implementation of identified adaptation solutions, whereas the DNSH criteria for climate change mitigation (included in Annex I to the Climate Delegated Act) do not have this requirement.\n2. Scope of assessment: While both sets of criteria require a risk and vulnerability assessment, the substantial contribution criteria for adaptation cover a broader scope, including the identification of physical climate risks material to the activity, whereas the DNSH criteria for mitigation focus more on reducing risks associated with specific activities (e.g., extraction, storage, transport, or manufacture of fossil fuels).\n3. Eligibility reporting requirements: The reporting entity needs to demonstrate that a climate risk and vulnerability assessment has been performed and an expenditure plan has been set up for adaptation solutions in Annex II, whereas only the turnover derived from products or services associated with an adapted activity can be recognized for Taxonomy eligibility in Annex I.\n\nIn summary, while both sets of criteria share some similarities, such as the need for a risk and vulnerability assessment, the substantial contribution criteria for climate change adaptation have a higher level of ambition than those for DNSH to mitigation, requiring implementation of identified adaptation solutions and more comprehensive assessment of physical climate risks.",
+                "BLEU": 0.11735539136869462,
+                "ROUGE-1": 0.44702842377260976,
+                "ROUGE-2": 0.23056994818652848,
+                "ROUGE-L": 0.24806201550387597,
+                "Exact Match": 0
+            }
+        ],
+        "Average Metrics": {
+            "Average BLEU": 0.1952331016640537,
+            "Average ROUGE-1": 0.4963990971252905,
+            "Average ROUGE-2": 0.3413752533616785,
+            "Average ROUGE-L": 0.375788998011688,
+            "Average Exact Match": 0.0
+        }
     },
     {
-        "Custom Prompt": "Answer the following question using the provided context:\nContext:\n<retrieved_docs>\nQuestion:\n<query>\nAnswer:"
+        "Custom Prompt": "Using the provided context, extract and return only the factual information directly relevant to the question:\nContext:<retrieved_docs>\nQuestion:<query>\nAnswer:",
+        "Top K Retrieved": 3,
+        "Metrics": [
+            {
+                "Question": "How should exposures to special purpose vehicles (\u2018SPVs\u2019) be treated? Do financial undertakings have to assess specialised lending/project financing for the purpose of Taxonomy-alignment reporting?",
+                "Generated Answer": "Here is the factual information directly relevant to the question:\n\nFinancial undertakings should include in their Taxonomy assessment:\n\n* Exposures to SPVs that finance entities subject to Article 19a or 29a of the Accounting Directive\n* Exposures to SPVs belonging to a group where the parent of the SPV is subject to Article 29a of that Directive on a consolidated group level\n\nFor lending and investments with unknown use of proceeds, financial undertakings should use:\n\n* KPIs of the undertaking that controls the SPV\n* KPIs of its reporting parent undertaking (if those KPIs are not available)\n\nFor financing and investments with known use of proceeds, financial undertakings should assess the Taxonomy-alignment of the economic activities financed through a SPV.\n\nExposures to SPVs for retail exposures (such as mortgage and motor vehicle loans) can be considered non-eligible/non-aligned if:\n\n* Relevant data is not available\n* Financial undertakings do not have adequate documentary evidence showing that all technical screening criteria (TSC) are met",
+                "BLEU": 0.10007893196550872,
+                "ROUGE-1": 0.4429065743944636,
+                "ROUGE-2": 0.3055555555555555,
+                "ROUGE-L": 0.35986159169550175,
+                "Exact Match": 0
+            },
+            {
+                "Question": "How is alignment with the technical screening criteria of the activity \u201cSea and coastal freight water transport, vessels for port operations and auxiliary activities\u201d in Section 6.10. demonstrated by undertakings chartering or operating vessels?",
+                "Generated Answer": "Here are the factual information directly relevant to the question:\n\nThe demonstration of alignment with the technical screening criteria of the activity \u201cSea and coastal freight water transport, vessels for port operations and auxiliary activities\u201d in Section 6.10. is made on a basis of the relevant provisions in the chartering contract.\n\nIn some cases, this may be the responsibility of:\n- The undertaking that was granted financing based on Taxonomy-alignment\n- The owner of the ship (if financing was provided to them)\n- The charterer or operator (if financing was provided to them for OpEx)",
+                "BLEU": 0.15324768583095125,
+                "ROUGE-1": 0.5136186770428015,
+                "ROUGE-2": 0.30588235294117644,
+                "ROUGE-L": 0.35797665369649806,
+                "Exact Match": 0
+            },
+            {
+                "Question": "Is the manufacture of equipment for commercial and residential pools (e.g. skimmers, inlets, filters, pH regulators, chlorine regulators, valves) Taxonomy-eligible under the activities \u201cConstruction, extension and operation of water collection, treatment and supply systems\u201d in Section 5.1. or \u201cConstruction, extension and operation of waste water collection and treatment\u201d in Section 5.3.?",
+                "Generated Answer": "Here is the factual information directly relevant to the question:\n\nThe manufacture of equipment for commercial and residential pools (e.g. skimmers, inlets, filters, pH regulators, chlorine regulators, valves) is not considered Taxonomy-eligible under either Section 5.1 or Section 5.3 of Annex I, as its main purpose does not contribute to delivering drinking water or ensuring the treatment of waste water.\n\nHowever, it's worth noting that equipment for traffic management and tolling could be eligible under the activity \"Manufacture of other low carbon technologies\" in Section 3.6. if it delivers GHG emissions savings compared to the best performing alternative technology/product/solution available on the market.",
+                "BLEU": 0.2087884197480809,
+                "ROUGE-1": 0.4298245614035088,
+                "ROUGE-2": 0.23893805309734512,
+                "ROUGE-L": 0.32456140350877194,
+                "Exact Match": 0
+            },
+            {
+                "Question": "How should NACE codes be used to identify Taxonomy-eligible activities in the context of eligibility-reporting?",
+                "Generated Answer": "Here is the factual information directly relevant to the question:\n\n* NACE codes provide a framework to collect and present statistics on economic activity.\n* NACE uses four levels, although some Member States may include more than four levels.\n* The assessment of Taxonomy eligibility should be made in view of the specific description of the activity provided in the Annexes of the Climate Delegated Act.\n* Only activities that are themselves set out in the Climate Delegated Act can be considered Taxonomy-eligible.\n* NACE codes can help identify taxonomy-eligible activities, but only the specific activity description sets out the exact scope of the activities included in the Act.",
+                "BLEU": 0.09112877562583073,
+                "ROUGE-1": 0.43705463182897863,
+                "ROUGE-2": 0.3579952267303103,
+                "ROUGE-L": 0.36104513064133015,
+                "Exact Match": 0
+            },
+            {
+                "Question": "How can points (a) to (d) of the biodiversity DNSH criteria of the activity \u201cForest management\u201d in Section 1.3. be ensured at a forest holding level?",
+                "Generated Answer": "Here is the factual information directly relevant to the question:\n\n* Forests are biologically diverse systems and offer a variety of habitats for plants, animals, fungi and micro-organisms.\n* Ensuring biodiversity-friendly practices that enhance forests' natural processes may require:\n + Setting areas aside\n + Establishing buffer zones for waterbody protection\n + Ensuring appropriate volume and diversity of deadwood\n + Presence of habitat trees and other microhabitats\n + Promoting natural regeneration\n + Diversifying tree species and the age structure of the holding.\n* Ensuring the diversity of associated habitats and species linked to the forest may require:\n + Ensuring appropriate volume and diversity of deadwood\n + Presence of tree-related microhabitats\n + Creating or maintaining a diverse age-structure in the forest.\n\nThese are the specific practices that can be used at a forest holding level to ensure points (a) to (d) of the biodiversity DNSH criteria of the activity \u201cForest management\u201d in Section 1.3.",
+                "BLEU": 0.057369047239842805,
+                "ROUGE-1": 0.34210526315789475,
+                "ROUGE-2": 0.08849557522123895,
+                "ROUGE-L": 0.16666666666666669,
+                "Exact Match": 0
+            },
+            {
+                "Question": "How should non-financial undertakings treat the turnover of eligible activities that are deconsolidated during the financial year?",
+                "Generated Answer": "According to Annex I, Section 1.1.1, the reported turnover of Taxonomy-aligned activities must cover the revenue recognized under International Accounting Standard 1, paragraph 82(a), as adopted by Commission Regulation (EC) No 1126/2008.\n\nAdditionally, non-financial undertakings are encouraged to use the revenue accounted for in their financial statements under IFRS to disclose their turnover for eligible activities.\n\nIn terms of deconsolidation, a parent undertaking must continue to recognize any income and expenses arising from a subsidiary that is no longer consolidated (i.e., where the subsidiary loses control), but all related assets and liabilities must be derecognized upon deconsolidation.",
+                "BLEU": 0.16872330696519025,
+                "ROUGE-1": 0.5340909090909092,
+                "ROUGE-2": 0.4114285714285714,
+                "ROUGE-L": 0.4602272727272727,
+                "Exact Match": 0
+            },
+            {
+                "Question": "What is the scope of the required analysis for the \u201cuse\u201d of the listed substances?",
+                "Generated Answer": "The factual information directly relevant to the question about the scope of the required analysis for the \"use\" of the listed substances is:\n\n* An activity does not cause significant harm to pollution prevention and control if the activity does not lead to the manufacture, placing on the market or use of certain substances (whether on their own, in mixtures or in an article).\n* The information on the manufacture, placing on the market or use of substances should be obtained through the supply chain by request to a direct supplier.\n* Proof of compliance can be achieved by requesting this information from suppliers.\n* Compliance with point (d) of Appendix C only applies within the scope of Directive 2011/65/EU (RoHS Directive), specifically large-scale fixed installations or means of transport for persons or goods, excluding electric two-wheel vehicles that are not type-approved.\n \nThe scope of the required analysis is to determine whether an activity leads to the manufacture, placing on the market or use of substances meeting specific criteria set out in Article 57 of REACH, and if so, whether their use is essential for health, safety or critical for society and if there are no alternatives that are acceptable from the standpoint of environment and health.",
+                "BLEU": 0.40375748748833207,
+                "ROUGE-1": 0.6526946107784432,
+                "ROUGE-2": 0.5481927710843373,
+                "ROUGE-L": 0.5329341317365269,
+                "Exact Match": 0
+            },
+            {
+                "Question": "What is the timeframe for adoption and implementation of this disclosures delegate act, and will there be a phased entry into force?",
+                "Generated Answer": "Here are the factual details directly relevant to the question:\n\n1. The Disclosures Delegated Act was adopted by the European Commission on 6 July 2021.\n2. It becomes applicable on 1 January 2022.\n3. There will be a phased entry into force:\n   - As of 1 January 2022, only qualitative information and information on the proportion of taxonomy-eligible activities in relation to total activities must be disclosed for non-financial undertakings.\n   - As of 1 January 2023, the Delegated Act will apply fully to non-financial undertakings.\n   - As of 1 January 2024, it will apply to financial undertakings with certain exemptions.\n   - By 30 June 2024, the delegated act will be reviewed in particular with respect to the treatment in KPIs of exposures to sovereigns and non-NFRD undertakings.\n   - As of 1 January 2026, the Delegated Act will apply for the KPIs of credit institutions for the trading book and non-banking services.",
+                "BLEU": 0.39961489476010287,
+                "ROUGE-1": 0.6762177650429798,
+                "ROUGE-2": 0.5187319884726225,
+                "ROUGE-L": 0.6189111747851003,
+                "Exact Match": 0
+            },
+            {
+                "Question": "Unlike nuclear power, natural gas undoubtedly releases CO2 when it is converted into electricity or heat. How can this form of energy lead to environmental benefits?",
+                "Generated Answer": "Here's the factual information directly relevant to the question:\n\n* Natural gas releases CO2 when it is converted into electricity or heat.\n* The Taxonomy Regulation sets out that substantial contribution to climate change mitigation can be achieved through, among other things, the avoidance or reduction of greenhouse gas emissions.\n* Article 10(2) complements this by phasing out greenhouse gas emissions, in particular emissions from solid fossil fuels \u2013 a requirement that has been taken into account in the technical screening criteria in the Complementary Delegated Act, along with the other requirements applicable to transitional activities.\n* In the Commission's modelling for Paris-aligned pathways, natural gas is projected to represent 22% of gross inland energy consumption in 2030, and 9% in 2050. Any natural gas in 2050 will have to be abated.\n* The technical screening criteria ensure that any new gas-based power/heat plant (or refurbished combined heat and power plant or heat/cool plant) is either below the technology-neutral 100g CO2/kWh life-cycle emission threshold (i.e. using Carbon Capture and Storage technologies).\n* Facilities have to integrate a rapid conversion towards renewables with a clear commitment for a full switch to renewables by 2035.\n\nNote that I excluded information about nuclear power, its environmental benefits, and other related topics as they are not directly relevant to the question about natural gas.",
+                "BLEU": 0.6092678570957888,
+                "ROUGE-1": 0.7445544554455444,
+                "ROUGE-2": 0.6918489065606362,
+                "ROUGE-L": 0.693069306930693,
+                "Exact Match": 0
+            },
+            {
+                "Question": "As of today many Energy Performance Certificates (EPC) in some Member States are based on energy consumption rather than energy demand. Can these consumption-based energy certificates be used as an equal basis to prove Taxonomy-alignment?",
+                "Generated Answer": "Here is the factual information directly relevant to the question:\n\n* Some Member States of the EU have Energy Performance Certificates (EPCs) based on energy consumption rather than energy demand.\n\nNote that this information does not provide a direct answer to whether these consumption-based EPCs can be used as an equal basis to prove Taxonomy-alignment.",
+                "BLEU": 0.0,
+                "ROUGE-1": 0.19444444444444445,
+                "ROUGE-2": 0.028571428571428574,
+                "ROUGE-L": 0.1388888888888889,
+                "Exact Match": 0
+            },
+            {
+                "Question": "Do the generic do no significant harm criteria in Appendix C cover the manufacturing process? How shall undertakings deal with the list of substances in Appendix C point (g) regarding compliance of an alignment assessment?",
+                "Generated Answer": "Here are the factual information directly relevant to the question:\n\n* The manufacturing process is subject to the criteria set out in Appendix C.\n* The criterion in point (g) aims to broaden the list of possible substances subject to Appendix C.\n* Substances covered by point (g) can be found in several sources, depending on the particular paragraph of REACH Art 57 they belong to:\n + As regards REACH Art. 57(a-c): the classification and labelling inventory managed by the European Chemical Agency pursuant to Article 42 of the CLP Regulation.\n + As regards REACH Art. 57(d-f): lists of substances under assessment by ECHA's informal Expert Groups.\n\nThese facts provide information on whether the manufacturing process is covered by Appendix C, how to deal with point (g) in Appendix C regarding compliance with an alignment assessment, and where to find substances covered by point (g).",
+                "BLEU": 0.12299183463916863,
+                "ROUGE-1": 0.4457831325301204,
+                "ROUGE-2": 0.3225806451612903,
+                "ROUGE-L": 0.36947791164658633,
+                "Exact Match": 0
+            },
+            {
+                "Question": "What are the key expectations for undertakings under Article 18 of the Taxonomy Regulation?",
+                "Generated Answer": "The text does not provide a direct answer to the question. However, based on the information provided earlier, I can summarize the key expectations for undertakings under Article 18 of the Taxonomy Regulation:\n\n1. **Reporting obligations**: Undertakings that are subject to mandatory reporting obligations under the Accounting Directive (large and public-interest entities with more than 500 employees) must also include information on their alignment with environmentally sustainable activities under the Taxonomy Regulation.\n2. **Voluntary reporting**: Undertakings covered only by national law transposing the NFRD can report their alignment with the Taxonomy voluntarily, but this is not a requirement.\n3. **Taxonomy-related disclosures**: Reporting undertakings should disclose information on how and to what extent their activities are associated with environmentally sustainable economic activities under the Taxonomy Regulation.\n4. **Transparency and consistency**: There is an expectation for transparency and consistency in reporting, as well as alignment with the environmental objectives of the Taxonomy Regulation.\n\nOverall, the key expectations for undertakings under Article 18 of the Taxonomy Regulation are to provide transparent and consistent reporting on their alignment with environmentally sustainable activities, while also meeting the mandatory reporting obligations under the Accounting Directive.",
+                "BLEU": 0.003503716381910614,
+                "ROUGE-1": 0.24319066147859925,
+                "ROUGE-2": 0.06042884990253411,
+                "ROUGE-L": 0.11478599221789883,
+                "Exact Match": 0
+            },
+            {
+                "Question": "How should undertakings account for negative revenues in the context of Taxonomy-eligibility reporting?",
+                "Generated Answer": "Here is the factual information directly relevant to the question:\n\n* The Disclosures Delegated Act does not specify how to treat negative revenues under Taxonomy eligibility reporting.\n* Negative revenue could be treated as a 0% value for Taxonomy-eligibility reporting, or reported in monetary amount.\n\nNote that there is no definitive answer provided on how to account for negative revenues.",
+                "BLEU": 0.18774899737874856,
+                "ROUGE-1": 0.45714285714285713,
+                "ROUGE-2": 0.3699421965317919,
+                "ROUGE-L": 0.4,
+                "Exact Match": 0
+            },
+            {
+                "Question": "How will this disclosures delegated act interact with the SFDR and the forthcomings Ecolabel and EU Green Bond Standard?",
+                "Generated Answer": "Here is the factual information directly relevant to the question:\n\nThe disclosure delegated act will be reviewed by 30 June 2024, with a specific focus on the treatment of exposures of financial undertakings to sovereigns and non-NFRD undertakings in the KPIs.\n\nThere is no phased entry into force for this delegated act. The timeline for application is as follows:\n\n* As of 1 January 2022: Only qualitative information and information on the proportion of taxonomy-eligible activities must be disclosed.\n* As of 1 January 2023: The Delegated Act will apply fully to non-financial undertakings.\n* As of 1 January 2024: The Delegated Act will apply fully to financial undertakings, with certain exemptions for exposures and investments in sovereign debt and non-NFRD undertakings.\n* By 30 June 2026: The delegated act will be reviewed, including the treatment of KPIs of credit institutions for the trading book and non-banking services.",
+                "BLEU": 0.0,
+                "ROUGE-1": 0.27442827442827444,
+                "ROUGE-2": 0.03757828810020877,
+                "ROUGE-L": 0.14553014553014554,
+                "Exact Match": 0
+            },
+            {
+                "Question": "The DNSH criterion for pollution prevention and control of the activity \u201cConstruction of new buildings\u201d in Section 7.1. requires that \u201cWhere the new construction is located on a potentially contaminated site (brownfield site), the site has been subject to an investigation for potential contaminants, for example using standard ISO 18400\u201d. If contamination is detected, should decontamination be implemented to comply with this criterion? Which thresholds should be considered to define if a site is contaminated? Is there any international reference or are national/local references to be used?",
+                "Generated Answer": "Here is the factual information directly relevant to the question:\n\n* A potentially contaminated site (brownfield site) requires an investigation for potential contaminants, such as using standard ISO 18400.\n* If contamination is detected during the investigation, decontamination should be implemented to comply with the criterion.\n* The thresholds to define if a site is contaminated are determined on a case-by-case basis after soil investigation and soil sampling (for instance, following the guidance of standard ISO 18400).\n* There is no common EU threshold to evaluate whether or not a site is contaminated.",
+                "BLEU": 0.1708380233597539,
+                "ROUGE-1": 0.4905660377358491,
+                "ROUGE-2": 0.3041825095057034,
+                "ROUGE-L": 0.39245283018867927,
+                "Exact Match": 0
+            }
+        ],
+        "Average Metrics": {
+            "Average BLEU": 0.17847059856528066,
+            "Average ROUGE-1": 0.4585748570630446,
+            "Average ROUGE-2": 0.30602352792431664,
+            "Average ROUGE-L": 0.36242594005737067,
+            "Average Exact Match": 0.0
+        }
+    },
+    {
+        "Custom Prompt": "<retrieved_docs>\n<query>",
+        "Top K Retrieved": 3,
+        "Metrics": [
+            {
+                "Question": "How does this disclosures delegated act interact with the climate delegated act adopted on 4 June and the future environmental delegated act specifying the technical screening criteria for the remaining environmental objectives?",
+                "Generated Answer": "The disclosures delegated act interacts with the climate delegated act and future environmental delegated acts as follows:\n\n1. **Climate Delegated Act**: The Climate Delegated Act was formally adopted on 4 June 2021 and provides the first technical screening criteria for companies and financial market participants on which economic activities can be considered to make a substantial contribution to climate mitigation and adaptation objectives.\n2. **Future Environmental Delegated Acts**: The disclosures delegated act will also interact with future environmental delegated acts that specify technical screening criteria for additional environmental objectives. These delegated acts will extend the EU Taxonomy to more sectors and activities that contribute positively to these objectives.\n3. **Integration with Article 8 of the Taxonomy Regulation**: The disclosures delegated act will rely on the climate and environmental delegated acts, as well as any future amendments brought to the Taxonomy Regulation, to mandate companies to assess and report the alignment of their financial and non-financial activities with the EU Taxonomy.\n4. **Phased Entry into Force**: The disclosures delegated act has a phased entry into force, with the following timeline:\n\t* As of 1st January 2022, only qualitative information and information on the proportion of taxonomy-eligible activities in relation to total activities must be disclosed for reporting periods 2021.\n\t* As of 1 January 2023, the delegated act will apply fully to non-financial undertakings.\n\t* As of 1 January 2024, the delegated act will apply fully to financial undertakings.\n\t* By 30 June 2024, the delegated act will be reviewed in particular with respect to the treatment in KPIs of exposures to sovereigns and non-NFRD undertakings.\n\t* As of 1 January 2026, the delegated act will apply for the KPIs of credit institutions for the trading book and non-banking services.\n\nOverall, the disclosures delegated act builds on the climate delegated act and future environmental delegated acts to provide a framework for companies and financial market participants to report their alignment with the EU Taxonomy.",
+                "BLEU": 0.245514278397438,
+                "ROUGE-1": 0.5659655831739963,
+                "ROUGE-2": 0.3685220729366603,
+                "ROUGE-L": 0.4321223709369025,
+                "Exact Match": 0
+            },
+            {
+                "Question": "What are the amendments introduced to the Delegated Act on disclosures under Article 8 of the Taxonomy Regulation?",
+                "Generated Answer": "The amendments introduced to the Delegated Act on disclosures under Article 8 of the Taxonomy Regulation include:\n\n1. Specific disclosure obligations related to new nuclear energy and fossil gas-related economic activities:\n   The CDA amends the Climate Delegated Act by adding specific new nuclear energy and fossil gas-related economic activities to the EU Taxonomy.\n   It also provides specific disclosure obligations related to those activities in new Article 8 of the Taxonomy Regulation.\n\n2. Mandatory reporting obligation for undertakings that are subject to the Non-Financial Reporting Directive:\n   The Delegated Act updates Article 8(1) of the Taxonomy Regulation to include undertakings that are subject to the obligation to publish non-financial information pursuant to Article 19a or Article 29a of Directive 2013/34/EU.\n\n3. Extension of reporting obligations to smaller undertakings:\n   The Delegated Act allows for voluntary reporting by undertakings covered only by national law transposing the NFRD, in addition to those undertakings directly in the scope of the NFRD.\n\nThe amendments aim to increase transparency and disclosure around environmentally sustainable activities among larger undertakings, while also providing an option for smaller undertakings to report their alignment with the Taxonomy voluntarily.",
+                "BLEU": 0.0,
+                "ROUGE-1": 0.3880597014925373,
+                "ROUGE-2": 0.08999999999999998,
+                "ROUGE-L": 0.19402985074626866,
+                "Exact Match": 0
+            },
+            {
+                "Question": "What happens when the DNSH criteria are assessed at the level of the \u201cgroup of holdings\u201d and one of the members leaves during the expected lifespan of the activity? Such lifespan can be several decades for forestry activities, and there is no assurance that the group stays the same for such a long time.",
+                "Generated Answer": "Based on the information provided, here's what happens when the DNSH criteria are assessed at the level of the \"group of holdings\" and one of the members leaves during the expected lifespan of the activity:\n\n* The group assessment is still allowed to continue as long as:\n  * The remaining group can be reasonably expected to continue their common assessment.\n  * The profile of the group and its homogeneity are not affected.\n\nIn this scenario, the group would not have any additional burden of proof regarding homogeneity. If the leaving member's departure does not alter the overall characteristics and risks associated with the group, the group can still carry out the verification as a group without needing to re-evaluate their homogeneity.",
+                "BLEU": 0.3421801302073508,
+                "ROUGE-1": 0.6504065040650406,
+                "ROUGE-2": 0.4098360655737705,
+                "ROUGE-L": 0.45528455284552855,
+                "Exact Match": 0
+            },
+            {
+                "Question": "How does this disclosures delegated act treat exposures to companies that are not subject to the reporting under this delegated act (SMEs, non-EU companies) in the reporting of financial companies?",
+                "Generated Answer": "According to Article 11 and 13 of the Disclosures Delegated Act:\n\n* Exposures to SMEs (small and medium-sized enterprises) and non-EU companies are not included in the numerator of their green ratios. However, financial institutions may include these exposures in the denominator.\n* The information about SMEs and/or non-EU company exposures is only allowed from 1 January 2025, subject to a review and outcome of an impact assessment.\n* Prior to the inclusion of SMEs exposures in the numerator of KPIs, the Commission will assess the administrative burden, access to finance, and potential impacts on SMEs, ensuring that any disproportionate impacts are avoided.\n\nIn other words, this delegated act excludes SMEs and non-EU companies from the calculation of their green ratios, unless specifically requested by financial institutions.",
+                "BLEU": 0.10343850532372328,
+                "ROUGE-1": 0.44345898004434586,
+                "ROUGE-2": 0.28953229398663693,
+                "ROUGE-L": 0.31485587583148555,
+                "Exact Match": 0
+            },
+            {
+                "Question": "What should undertakings with no Taxonomy-eligible economic activities report?",
+                "Generated Answer": "According to Article 1(6) of the Disclosures Delegated Act, undertakings with no Taxonomy-non-eligible economic activities should disclose information about their non-eligible economic activities. This can be done by filling in Section B of the templates provided in Annex II to the Disclosures Delegated Act.\n\nIn other words, if a company's economic activities are not covered by the EU Taxonomy, they can still report on their non-eligible activities as required by Article 10 of the Disclosures Delegated Act.",
+                "BLEU": 0.1427571744933169,
+                "ROUGE-1": 0.5101214574898786,
+                "ROUGE-2": 0.3346938775510204,
+                "ROUGE-L": 0.340080971659919,
+                "Exact Match": 0
+            },
+            {
+                "Question": "By when should an implementation in regional, high-resolution climate scenarios be aimed for? How will conformity with the requirements of the EU Taxonomy be ensured in this case?",
+                "Generated Answer": "According to the text:\n\n* An implementation in regional, high-resolution climate scenarios is expected to happen faster as demand increases.\n* Regional climate models with a 12.5*12.5 km\u00b2 resolution are already available on the European level for Representative Concentration Pathway (RCP) scenarios RCP2,6, RCP4.5, and RCP8.5.\n* Further regionalized data with 5*5 km\u00b2 resolution is also available for some countries.\n* Conformity with the requirements of the EU Taxonomy will be ensured by:\n\t+ The development of specific regional high-resolution projections through the European Horizon Europe research programme.\n\t+ Stakeholder input and feedback, including notifications to the Platform on Sustainable Finance about activities that should be covered in the EU Taxonomy.\n\t+ Scientific evidence and assessment of economic activities based on their potential contribution to climate objectives.\n\nNote that there is no specific timeline provided for the implementation of regional, high-resolution climate scenarios aimed at conforming with the EU Taxonomy. However, it is mentioned that progress is being made, and demand is driving the supply of high-resolution climate scenarios.",
+                "BLEU": 0.2194177325180508,
+                "ROUGE-1": 0.6030534351145038,
+                "ROUGE-2": 0.4307692307692308,
+                "ROUGE-L": 0.2595419847328244,
+                "Exact Match": 0
+            },
+            {
+                "Question": "What does \u201chighest two populated classes\u201d for household appliances referred to in the TSC in Section 3.5. and, where applicable, the TSC in Section 7.3. mean in practice? What household appliances fall under these classes? Could the EPREL database be used to obtain the information?",
+                "Generated Answer": "According to the provided text:\n\n* The \"highest two populated classes\" of energy efficiency for household appliances refer to the two most commonly found classes of appliances on the market that meet at least some energy efficiency standards.\n* This means that the two classes with the highest number of products that are actually available in the market are being targeted by this requirement.\n* The EPREL (European Product Database for Energy Labelling) database can be used to obtain information about which household appliances fall under these two highest populated classes, as it provides an overview of the available products on the market.\n\nUnfortunately, the text does not provide a specific list of the two highest populated classes. However, EPREL can likely provide this information based on its comprehensive database of energy-efficient products.",
+                "BLEU": 0.18092237227530125,
+                "ROUGE-1": 0.5096153846153846,
+                "ROUGE-2": 0.2718446601941748,
+                "ROUGE-L": 0.3076923076923077,
+                "Exact Match": 0
+            },
+            {
+                "Question": "When and how should the Taxonomy disclosures be verified by external reviewers? How will this change with the application of CSRD?",
+                "Generated Answer": "According to the EU documents, here's when and how Taxonomy disclosures should be verified by external reviewers:\n\n**Before the application of CSRD:**\n\n1. The Taxonomy Regulation Articles 19a and 29a of Directive 2013/34/EU apply.\n2. Statutory auditors or audit firms are required to check if the non-financial statement or separate report containing Taxonomy disclosures has been provided.\n3. National legislation may require that this information is verified by an independent assurance services provider.\n\n**After the application of CSRD (starting from financial years on or after 1 January 2024):**\n\n1. The statutory auditor or audit firm should express an opinion based on a limited assurance engagement regarding the compliance of the sustainability reporting with the requirements of Article 8 of the Taxonomy Regulation.\n2. For some activities, compliance with TSC (Taxonomy Standardized Classification) should be verified by an independent third party due to their complexity.\n\nAdditionally, the Taxonomy Regulation's provisions related to Taxonomy-eligibility reporting as part of the Disclosures Delegated Act are subject to a different verification process:\n\n1. Non-financial statements are subject to an existence check by the statutory auditor in accordance with the Accounting Directive 2013/34/EU.\n2. There is no requirement in Union Law to verify the content of the disclosures.\n\nHowever, the CSRD is expected to require auditors to verify and express an opinion on sustainability reporting's compliance with the requirements (including reporting according to the Taxonomy Regulation and its delegated acts).",
+                "BLEU": 0.26670438746985087,
+                "ROUGE-1": 0.6038394415357767,
+                "ROUGE-2": 0.4063047285464098,
+                "ROUGE-L": 0.387434554973822,
+                "Exact Match": 0
+            },
+            {
+                "Question": "Do the manufacturing activities in Sections 3.1 to 3.6 include the manufacturing of components of its technologies?",
+                "Generated Answer": "Yes, the manufacturing activities in Sections 3.1 to 3.6 include the manufacturing of components of its technologies.\n\nIn Section 3.4, \"Manufacture of batteries\", the components are specified under the description of the activity.\n\nHowever, not all manufacturing activities in these sections include the manufacturing of components of its technologies. For example:\n\n* In Section 3.3, \"Manufacture of low carbon technologies for transport\", the focus is on the overall production of low-carbon technologies, but it does not automatically include the manufacturing of specific components.\n* In Section 3.6, \"Manufacture of other low carbon technologies\", the activity covers manufactured technologies that are \"aimed at substantial life cycle greenhouse gas (GHG) emission savings in other sectors of the economy\". The scope includes specific NACE codes such as C22, C25, C26, C27 and C28, which cover products like tyres and semi-conductors.\n\nIn summary, some manufacturing activities in Sections 3.1 to 3.6 include the manufacturing of components of its technologies, while others do not.",
+                "BLEU": 0.08555632917952136,
+                "ROUGE-1": 0.3598326359832636,
+                "ROUGE-2": 0.1772151898734177,
+                "ROUGE-L": 0.27615062761506276,
+                "Exact Match": 0
+            },
+            {
+                "Question": "Is there any minimum turnover, CapEx and OpEx threshold below which undertakings are not obliged to report Taxonomy-eligibility or alignment of their economic activities (\u2018materiality thresholds\u2019)?",
+                "Generated Answer": "According to Article 8(2) of the Taxonomy Regulation, undertakings subject to the NFRD/CSRD are obligated to report the proportion of their turnover, CapEx, and OpEx associated with Taxonomy-aligned economic activities. No exemption is foreseen from this obligation.\n\nThere are no specific minimum thresholds for turnover, CapEx, and OpEx below which undertakings are not obliged to report Taxonomy-eligibility or alignment of their economic activities. All non-financial undertakings subject to the NFRD/CSRD must report on the proportion of their turnover, CapEx, and OpEx associated with Taxonomy-aligned economic activities, regardless of the size of their operations.\n\nHowever, as mentioned in Section 1.1.3.2 of Annex I, there is a degree of flexibility in reporting OpEx KPIs for non-financial undertakings whose OpEx is considered \"not material\" for their business model. In this case, the undertaking is exempt from calculating the numerator of the OpEx KPI and discloses that numerator as zero, but still provides total value of the OpEx denominator and explains the absence of materiality of OpEx in their business model.\n\nIt's also worth noting that undertakings with no Taxonomy-eligible economic activities are required to disclose information on their non-eligible economic activities.",
+                "BLEU": 0.29044836847851124,
+                "ROUGE-1": 0.6032482598607889,
+                "ROUGE-2": 0.38228438228438233,
+                "ROUGE-L": 0.47795823665893267,
+                "Exact Match": 0
+            }
+        ],
+        "Average Metrics": {
+            "Average BLEU": 0.18769392783430644,
+            "Average ROUGE-1": 0.5237601383375515,
+            "Average ROUGE-2": 0.31610025017157034,
+            "Average ROUGE-L": 0.3445151333693054,
+            "Average Exact Match": 0.0
+        }
     }
 ]

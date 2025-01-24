@@ -6,32 +6,10 @@ import json
 from utils.corpus_loader import load_corpus_from_json
 from utils.faiss_manager import build_faiss_index, load_faiss_index, query_faiss
 from utils.ollama_interface import generate_answer_with_ollama
-from utils.metrics import evaluate_pipeline_with_custom_prompt, update_progress, save_metrics_to_file
+from utils.metrics import evaluate_pipeline_with_custom_prompt, update_progress, save_metrics_to_file, load_saved_prompts_with_metrics
 from sentence_transformers import SentenceTransformer
 
-# Function to load saved prompts from the results file
-def load_saved_prompts(filename="batch_evaluation_results.json"):
-    try:
-        with open(filename, "r") as f:
-            data = json.load(f)
-        prompts = [entry.get("Custom Prompt") for entry in data] if isinstance(data, list) else [data.get("Custom Prompt")]
-        return prompts
-    except FileNotFoundError:
-        return []
 
-def save_new_prompt(custom_prompt, filename="batch_evaluation_results.json"):
-    try:
-        with open(filename, "r") as f:
-            data = json.load(f)
-        if not isinstance(data, list):
-            data = [data]
-    except FileNotFoundError:
-        data = []
-
-    data.append({"Custom Prompt": custom_prompt})
-
-    with open(filename, "w") as f:
-        json.dump(data, f, indent=4)
 
 # Main Streamlit Interface
 def main():
@@ -70,8 +48,10 @@ def main():
             query = st.text_input("Enter your question:")
             top_k = st.slider("Number of documents to retrieve:", 1, 10, 5)
 
-            # Load saved prompts
-            saved_prompts = load_saved_prompts()
+            # Load saved prompts with metrics
+            saved_prompts_with_metrics = load_saved_prompts_with_metrics()
+            saved_prompts = list(saved_prompts_with_metrics.keys())
+
             selected_prompt = st.selectbox("Select a saved custom prompt:", ["None"] + saved_prompts)
 
             if selected_prompt != "None":
@@ -79,6 +59,17 @@ def main():
                     "Selected Custom Prompt (editable):",
                     selected_prompt
                 )
+
+                # Display metrics for the selected prompt
+                metrics_info = saved_prompts_with_metrics[selected_prompt]
+                st.markdown("### Metrics for Selected Prompt")
+                st.write(f"**Top K Retrieved:** {metrics_info['Top K Retrieved']}")
+                if metrics_info["Average Metrics"]:
+                    avg_metrics = metrics_info["Average Metrics"]
+                    st.write(f"**Average BLEU:** {avg_metrics['Average BLEU']:.4f}")
+                    st.write(f"**Average ROUGE-1:** {avg_metrics['Average ROUGE-1']:.4f}")
+                    st.write(f"**Average ROUGE-2:** {avg_metrics['Average ROUGE-2']:.4f}")
+                    st.write(f"**Average ROUGE-L:** {avg_metrics['Average ROUGE-L']:.4f}")
             else:
                 custom_prompt = st.text_area(
                     "Enter your custom prompt (use <retrieved_docs> and <query> as placeholders):",
@@ -136,7 +127,6 @@ def main():
                     )
 
                     if save_results:
-                        save_new_prompt(custom_prompt)
                         save_metrics_to_file(metrics, avg_metrics, custom_prompt, top_k)
 
                 st.subheader("Batch Evaluation Metrics")

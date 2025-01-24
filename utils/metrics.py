@@ -53,7 +53,26 @@ def save_metrics_to_file(metrics, avg_metrics, custom_prompt, top_k, filename="b
     with open(filename, "w") as f:
         json.dump(data, f, indent=4)
 
-def evaluate_pipeline_with_custom_prompt(custom_prompt, questions, answers, documents, index, model, top_k=5, update_progress=None, save_to_file=False):
+
+def load_saved_prompts_with_metrics(filename="batch_evaluation_results.json"):
+    """Function to load saved prompts from the results file"""
+    try:
+        with open(filename, "r") as f:
+            data = json.load(f)
+        if not isinstance(data, list):
+            data = [data]
+        prompts_with_metrics = {
+            entry.get("Custom Prompt"): {
+                "Top K Retrieved": entry.get("Top K Retrieved"),
+                "Average Metrics": entry.get("Average Metrics")
+            }
+            for entry in data
+        }
+        return prompts_with_metrics
+    except FileNotFoundError:
+        return {}
+
+def evaluate_pipeline_with_custom_prompt(custom_prompt, questions, answers, documents, index, model, top_k=5, update_progress=None):
     """Evaluate the RAG pipeline using a custom prompt applied to all queries."""
     metrics = []
     total_queries = len(questions)
@@ -97,8 +116,5 @@ def evaluate_pipeline_with_custom_prompt(custom_prompt, questions, answers, docu
         "Average Exact Match": np.mean([m["Exact Match"] for m in metrics])
     }
 
-    # Save metrics to a file if required
-    if save_to_file:
-        save_metrics_to_file(metrics, avg_metrics, custom_prompt, top_k)
 
     return metrics, avg_metrics
