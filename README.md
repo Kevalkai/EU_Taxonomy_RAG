@@ -7,7 +7,7 @@ This project implements a **Retrieval-Augmented Generation (RAG)** model to answ
 The app provides an intuitive interface to:
 - Test single queries.
 - Evaluate custom prompts with batch queries.
-- Analyze BLEU, ROUGE, and Exact Match metrics for the model's responses.
+- Analyze BLEU, ROUGE.
 
 ## Table of Contents
 1. [Features](#features)
